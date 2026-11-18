@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+}
+
+:root {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #17231e;
+  background: #f5f6f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  color: #fff;
+  background: #1a7753;
+}
+
+.hero-grid {
+  background-image: radial-gradient(rgba(242, 255, 246, 0.22) 1px, transparent 1px);
+  background-size: 19px 19px;
+}
+
+.fuel-glow {
+  background:
+    radial-gradient(ellipse at 68% 42%, rgba(181, 232, 118, 0.21), transparent 40%),
+    radial-gradient(ellipse at 12% 100%, rgba(44, 129, 83, 0.2), transparent 45%);
+}
+
+.soft-shadow {
+  box-shadow: 0 16px 55px rgba(30, 48, 37, 0.08);
+}
+
+.toast-enter {
+  animation: toast-in 220ms ease-out;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
